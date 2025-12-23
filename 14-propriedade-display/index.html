@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Propriedade Display</title>
+    <style>
+        .bloco {
+            display: block;
+            background-color: lightgray;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .em-linha {
+            display: inline;
+            background-color: yellow;
+            padding: 5px;
+        }
+        .inline-bloco {
+            display: inline-block;
+            width: 200px;
+            height: 50px;
+            background-color: lightblue;
+            margin: 0px;
+            /*text-align: center;*/
+            line-height: 50px;
+        }
+        .escondido {
+            display: none;
+        }
+        .flex-container {
+            display: flex;
+            background-color: #eee;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .flex-item {
+            background-color: coral;
+            margin: 5px;
+            padding: 10px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background-color: #ddd;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .grid-item {
+            background-color: lightgreen;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Propriedade: Display</h1>
+    
+    <h3>Display Block</h3>
+    <div class="bloco">Ocupa a largura toda por padrão.</div>
+
+    <h3>Display Inline</h3>
+    <span class="em-linha">Fica na mesma linha.</span>
+    <span class="em-linha">Não aceita width/height bem.</span>
+
+    <h3>Display Inline-Block</h3>
+    <div class="inline-bloco">Na linha, mas aceita tamanho.</div>
+    <div class="inline-bloco">Muito útil para botões.</div>
+
+    <h3>Display None</h3>
+    <p>O parágrafo abaixo existe no código, mas está com display: none;</p>
+    <div class="escondido">Eu não apareço na página!</div>
+
+    <h3>Display Flex (Layout Unidimensional)</h3>
+    <div class="flex-container">
+        <div class="flex-item">Flex Item 1</div>
+        <div class="flex-item">Flex Item 2</div>
+        <div class="flex-item">Flex Item 3</div>
+    </div>
+
+    <h3>Display Grid (Layout Bidimensional)</h3>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+    </div>
+</body>
+</html>
