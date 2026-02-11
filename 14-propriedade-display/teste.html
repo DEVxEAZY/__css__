@@ -6,35 +6,51 @@
     <title>Document</title>
     <style>
         .title {
-            border-color: black;
-            border-width: 1px;
-            border-style: solid;
+            border: 1px solid black;
         }
         .paragraph {
-            border-color: black;
-            border-width: 1px;
-            border-style: solid;
+            border: 1px solid black;
+        }
+        .list-item {
+            border: 1px solid black;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
         }
     </style>
 </head>
 <body>
-    <h1 class="title" style="border-color: black; border-width: 1px; border-style: solid;">Meu primeiro CSS</h1>
+    <h1 class="title"
+    style="display: block;
+    border: 1px solid black;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    height: 100px;">Meu primeiro CSS</h1>
 
-    <p class="paragraph" style="border-color: black; border-width: 1px; border-style: solid;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorem error, minus veniam odio odit in facilis blanditiis optio perferendis adipisci qui aliquam voluptatum, aspernatur recusandae quas reprehenderit labore quia.</p>
+    <h3 class="box" style="display: inline-flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-items: center;
+    padding: 10px 10px 10px 10px;
+    margin: 0 0 0 0;
+    width: 100px;
+    height: 100px;">Teste</h3><div class="box" style="display: inline-flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-items: center;
+    padding: 30px 50px 30px 50px; 
+    margin: 0 0 0 0;">Teste2</div>
+
+    <p class="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dolorem error, minus veniam odio odit in facilis blanditiis optio perferendis adipisci qui aliquam voluptatum, aspernatur recusandae quas reprehenderit labore quia.</p>
 
     <br><br>
 
     <ul>
-        <li class="list-item" style="border-color: black; border-width: 1px; border-style: solid;
-        display: inline-flex; align-items: center; justify-content: center;
-        background-color: aqua; width: 100px; height: 100px;
-        ">Item 1</li><li class="list-item" style="border-color: black; border-width: 1px; border-style: solid;
-        display: inline-flex; align-items: center; justify-content: center;
-        background-color: aqua; width: 100px; height: 100px;
-        ">Item 2</li><li class="list-item" style="border-color: black; border-width: 1px; border-style: solid;
-        display: inline-flex; align-items: center; justify-content: center;
-        background-color: aqua; width: 100px; height: 100px;
-        ">Item 3</li>
+        <li class="list-item">Item 1</li><li class="list-item">Item 2</li>
+        <li class="list-item">Item 3</li>
     </ul>
     
 </body>
