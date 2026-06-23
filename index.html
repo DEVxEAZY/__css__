@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos CSS — Índice do estudo</title>
+    <style>
+        :root {
+            --bg: #0f1419;
+            --surface: #1a2332;
+            --border: #2d3a4d;
+            --text: #e8eaed;
+            --muted: #9aa5b8;
+            --accent: #5b9cfa;
+            --accent-soft: rgba(91, 156, 250, 0.12);
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 2rem clamp(1rem, 4vw, 3rem);
+        }
+        header {
+            max-width: 48rem;
+            margin-bottom: 2.5rem;
+        }
+        h1 {
+            font-size: clamp(1.75rem, 4vw, 2.25rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin: 0 0 0.5rem;
+        }
+        .lead {
+            color: var(--muted);
+            font-size: 1.05rem;
+            margin: 0;
+        }
+        .lista-conceitos {
+            max-width: 48rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        .lista-conceitos li {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.25rem 1.35rem;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .lista-conceitos li:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px var(--accent-soft);
+        }
+        .lista-conceitos a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        .lista-conceitos a:hover {
+            text-decoration: underline;
+        }
+        .lista-conceitos a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+        .meta {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin: 0.35rem 0 0.5rem;
+            font-variant-numeric: tabular-nums;
+        }
+        .lista-conceitos p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fundamentos de CSS</h1>
+        <p class="lead">Um único índice: cada link abre o exemplo prático na pasta correspondente e, abaixo, o que esse tópico cobre em uma frase.</p>
+    </header>
+
+    <ol class="lista-conceitos" start="1">
+        <li>
+            <span class="meta">Passo 1</span>
+            <a href="01-conceito-e-inline/index.html">Conceito de CSS e estilo inline</a>
+            <p>O CSS define aparência; o estilo <strong>inline</strong> vai direto na tag (<code>style=&quot;&quot;</code>), útil para testes rápidos, pouco recomendável em escala.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 2</span>
+            <a href="02-css-interno/index.html">CSS interno (na página)</a>
+            <p>Regras dentro de <code>&lt;style&gt;</code> no <code>&lt;head&gt;</code>: já separa um pouco do HTML, mas vale para uma página só ou protótipos.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 3</span>
+            <a href="03-css-externo/index.html">CSS externo (arquivo .css)</a>
+            <p>Um arquivo <code>.css</code> ligado com <code>&lt;link&gt;</code>: reutilização entre páginas, cache do navegador e manutenção típica em projetos reais.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 4</span>
+            <a href="04-seletores-e-classes/index.html">Seletores e classes</a>
+            <p>Seletores escolhem <em>quais</em> elementos ganham cada regra; classes (<code>.nome</code>) agrupam estilos reutilizáveis sem repetir marcação específica demais.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 5</span>
+            <a href="05-propriedade-color/index.html">Propriedade <code>color</code></a>
+            <p>Define a cor do texto (e, em geral, do conteúdo “currentColor” de ícones/SVG associados). Base para contraste e hierarquia visual.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 6</span>
+            <a href="06-propriedade-background/index.html">Propriedade <code>background</code></a>
+            <p>Cor de fundo, imagens, posição e repetição atrás do conteúdo; compõe atmosfera da página sem alterar estrutura do HTML.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 7</span>
+            <a href="07-propriedade-border/index.html">Propriedade <code>border</code></a>
+            <p>Contorno ao redor da caixa: espessura, estilo e cor; também influencia radii (<code>border-radius</code>) para cantos arredondados.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 8</span>
+            <a href="08-propriedade-margin/index.html">Propriedade <code>margin</code></a>
+            <p>Espaço <strong>externo</strong> entre caixes (afasta um bloco dos vizinhos). Colapso de margens é um detalhe importante entre blocos adjacentes.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 9</span>
+            <a href="09-propriedade-padding/index.html">Propriedade <code>padding</code></a>
+            <p>Espaço <strong>interno</strong> entre a borda e o conteúdo; aumenta a área clicável e respiração visual sem mover outros elementos tanto quanto margem externa.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 10</span>
+            <a href="10-propriedades-width-e-height/index.html"><code>width</code> e <code>height</code></a>
+            <p>Define tamanhos explícitos da caixa de conteúdo (combinando com modelo de caixa para bordas e padding).</p>
+        </li>
+        <li>
+            <span class="meta">Passo 11</span>
+            <a href="11-propriedade-text/index.html">Propriedades de texto</a>
+            <p>Alinhamento, espaçamento entre letras e linhas, decoração (<code>text-decoration</code>), indentação etc.: tipografia dentro do fluxo.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 12</span>
+            <a href="12-propriedade-fonts/index.html">Fontes (<code>font-*</code>)</a>
+            <p>Família, tamanho, peso (<code>font-weight</code>), estilo italic; combinado ao texto forma a identidade legível da interface.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 13</span>
+            <a href="13-estilizando-links/index.html">Estilizando links</a>
+            <p>Pseudoclasses (<code>:link</code>, <code>:visited</code>, <code>:hover</code>, <code>:focus</code>) e estados acessíveis; links devem parecer clicáveis e ter foco visível.</p>
+        </li>
+        <li>
+            <span class="meta">Passo 14</span>
+            <a href="14-propriedade-display/index.html">Propriedade <code>display</code></a>
+            <p>Define o <strong>modo de layout</strong>: bloco, inline, flex, grid, none… é a chave para flexbox (<code>display: flex</code>) e grid (<code>display: grid</code>).</p>
+        </li>
+    </ol>
+</body>
+</html>
